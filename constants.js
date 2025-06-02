@@ -3,7 +3,7 @@ export const METADATA = {
   title: "Portfolio | Rajshree Singh",
   description:
     "Rajshree Singh is a passionate Frontend Engineer, dedicated to crafting aesthetic and modern apps that captivate and engage users.",
-  siteUrl: "https://rrajshree8.github.io",
+  siteUrl: "https://rrajshree28.vercel.app/",
   keywords: [
     "Rajshree Singh",
     "Frontend Engineer",
