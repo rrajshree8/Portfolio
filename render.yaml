@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: portfolio-app
+    env: node
+    plan: free
+    buildCommand: |
+      corepack enable
+      yarn install --immutable
+      yarn build
+    startCommand: yarn start
+    envVars:
+      - key: NODE_ENV
+        value: production
