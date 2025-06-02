@@ -92,7 +92,7 @@ const Collaboration = ({ clientHeight }) => {
         <p className="mt-6 md:mt-8 opacity-40 text-6xl sm:text-7xl font-semibold whitespace-nowrap ui-right transform-gpu">
           {Array(5)
             .fill(
-              " Agile Development Frontend Development React Native Development "
+              " Agile Development Frontend Development ReactJS Development "
             )
             .reduce((str, el) => str.concat(el), "")}{" "}
         </p>

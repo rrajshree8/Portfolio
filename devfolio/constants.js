@@ -3,7 +3,7 @@ export const METADATA = {
   title: "Portfolio | Rajshree Singh",
   description:
     "Rajshree Singh is a passionate Frontend Engineer, dedicated to crafting aesthetic and modern apps that captivate and engage users.",
-  siteUrl: "https://www.shubhporwal.me/",
+  siteUrl: "https://rrajshree8.github.io",
   keywords: [
     "Rajshree Singh",
     "Frontend Engineer",
@@ -126,6 +126,45 @@ export const PROJECTS = [
   },
 ];
 
+export const ARTICLES = [
+  {
+    name: "Article",
+    image: "/projects/medium.webp",
+    blurImage: "/projects/blur/medium-blur.webp",
+    description: "Published Articles on Medium",
+    gradient: ["#F14658", "#DC2537"],
+    url: "https://medium.com/@rrajshreesingh28",
+    tech: ["react", "typescript", "tailwindcss",],
+  },
+    {
+    name: "Article",
+    image: "/projects/medium.webp",
+    blurImage: "/projects/blur/medium-blur.webp",
+    description: "Published Articles on Medium",
+    gradient: ["#F14658", "#DC2537"],
+    url: "https://medium.com/@rrajshreesingh28",
+    tech: ["react", "typescript", "tailwindcss",],
+  },
+    {
+    name: "Article",
+    image: "/projects/medium.webp",
+    blurImage: "/projects/blur/medium-blur.webp",
+    description: "Published Articles on Medium",
+    gradient: ["#F14658", "#DC2537"],
+    url: "https://medium.com/@rrajshreesingh28",
+    tech: ["react", "typescript", "tailwindcss",],
+  },
+    {
+    name: "Article",
+    image: "/projects/medium.webp",
+    blurImage: "/projects/blur/medium-blur.webp",
+    description: "Published Articles on Medium",
+    gradient: ["#F14658", "#DC2537"],
+    url: "https://medium.com/@rrajshreesingh28",
+    tech: ["react", "typescript", "tailwindcss",],
+  },
+];
+
 // export const WORK = [
 //   {
 //     id: 1,
@@ -172,88 +211,46 @@ export const PROJECTS = [
 // ];
 
 export const WORK_CONTENTS = {
-  DUKAAN: [
+  Delta6LabsFintechCompany: [
     {
-      title: "Dukaan",
+      title: "Delta6Labs Fintech Company",
       description:
-        "Dukaan is a platform that enables businesses to launch their online stores at ease.",
+        "Implemented key frontend features for Bitdelta and Zenit projects using Next.js and TypeScript, ensuring high-performance and scalability across multiple pages.",
       content: (
         <div className="h-full w-full flex items-center justify-center text-white px-4">
-          Revolutionizing commerce, one click at a time
+          Software Developer-1
         </div>
       ),
     },
     {
-      title: "Transformation",
+      title: "Trading",
       description:
-        "Since 2023, the Dukaan Seller Dashboard struggled with technical issues and a broken user experience due to accumulated technical debt. Leading a team of two junior developers, we migrated the dashboard from CSR to SSR, redesigned the UI, and overhauled the codebase in the process. This resolved the technical debt and vastly improved the user experience, making it Dukaan's largest and most impactful migration.",
+        "Designed and developed the Copytrading and Private Copytrading modules,allowing seamless user interactions and secure trade copying functionality,contributing to improved platform user retention.Integrated feature flagging mechanisms, enabling smooth and controlled rollout of new functionalities across the platform without disrupting the user experience",
       content: (
         <div className="h-full w-full flex items-center justify-center text-white px-4">
-          Senior Frontend Engineer
-        </div>
-      ),
-    },
-    {
-      title: "Evolution",
-      description:
-        "Recognizing the need for improved performance and user engagement, I spearheaded the migration of the Dukaan App from native to React-Native for iOS and Android platforms. This strategic move led to a X% enhancement in app performance and a Y% boost in user engagement, representing a significant milestone in the app's evolution.",
-      content: (
-        <div className="h-full w-full flex items-center justify-center text-white px-4">
-          Frontend Engineer
+         Software Developer-1
         </div>
       ),
     },
     {
       title: "Optimization",
       description:
-        "Leveraging user feedback and analytics, I improved the seller web dashboard design, reducing bounce rates. Simultaneously, I overhauled the build process, slashing bundle size and boosting overall performance.",
+        "Optimized frontend performance through code splitting, image optimization,and lazy loading, resulting in faster page load times and reduced bundlesizes across both Bitdelta and Zenit platforms.Built reusable components for trading views and dashboards, ensuring consistency in design and functionality while reducing development time.",
       content: (
         <div className="h-full w-full flex items-center justify-center text-white px-4">
-          Frontend Engineer Intern
+          Associate Software Developer
         </div>
       ),
     },
   ],
-  AVIATE: [
+  CybronicalIndia: [
     {
-      title: "Aviate",
+      title: "E-Commerce",
       description:
-        "Aviate is a preparation and mentorship platform for job-seekers that are seeking non-technical roles across top companies",
+        "Developed logistics and e-commerce platforms using React.js, Next.js, and TypeScript, ensuring scalability and performance.Implemented real-time tracking systems and optimized website performance with lazy loading and code splitting.Built intuitive dashboards for inventory and order management, streamlining logistics processes.",
       content: (
         <div className="h-full w-full flex items-center justify-center text-white px-4">
-          Finding the right job isn&apos;t fate, it&apos;s navigation
-        </div>
-      ),
-    },
-    {
-      title: "Innovation",
-      description:
-        "I spearheaded the development of Q-Rate, their flagship product, a voice-based applicant screening platform. Moreover, I took initiatives to enhance user engagement and drive substantial increases in daily traffic. Additionally, I implemented an error-logging and bug reporting system, significantly diminishing user-reported bugs.",
-      content: (
-        <div className="h-full w-full flex items-center justify-center text-white px-4">
-          Frontend Developer Intern
-        </div>
-      ),
-    },
-  ],
-  SPACENOS: [
-    {
-      title: "Spacenos",
-      description:
-        "A dynamic startup dedicated to creating innovative products that make the world a better place.",
-      content: (
-        <div className="h-full w-full flex items-center justify-center text-white px-4">
-          We build apps that solve problems for the next billion people
-        </div>
-      ),
-    },
-    {
-      title: "Trailblazing",
-      description:
-        "I led the comprehensive overhaul of the Admin Portal, implementing CRUD features for all services and providers. Additionally, I architected a feature enabling precise customer location tracking and delivering insightful usage statistics. Through optimized and compressed file serving, I catalyzed a remarkable Yx increase in page speed, resulting in a X% boost in customer retention.",
-      content: (
-        <div className="h-full w-full flex items-center justify-center text-white px-4">
-          Web Developer Intern
+         Frontend Intern
         </div>
       ),
     },

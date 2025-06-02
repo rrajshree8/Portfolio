@@ -12,32 +12,22 @@ const Work = ({ isDesktop }) => {
   const tabItems = useMemo(
     () => [
       {
-        title: "Dukaan",
-        value: "dukaan",
+        title: "Delta6labs",
+        value: "Delta6labs",
         content: (
           <StickyScroll
             isDesktop={isDesktop}
-            contentItems={WORK_CONTENTS.DUKAAN}
+            contentItems={WORK_CONTENTS.Delta6LabsFintechCompany}
           />
         ),
       },
       {
-        title: "Aviate",
-        value: "Aviate",
+        title: "Cybronical",
+        value: "Cybronical",
         content: (
           <StickyScroll
             isDesktop={isDesktop}
-            contentItems={WORK_CONTENTS.AVIATE}
-          />
-        ),
-      },
-      {
-        title: "Spacenos",
-        value: "spacenos",
-        content: (
-          <StickyScroll
-            isDesktop={isDesktop}
-            contentItems={WORK_CONTENTS.SPACENOS}
+            contentItems={WORK_CONTENTS.CybronicalIndia}
           />
         ),
       },
