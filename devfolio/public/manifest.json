@@ -1,0 +1,33 @@
+{
+  "name": "Portfolio | Rajshree Singh",
+  "short_name": "Rajshree Singh",
+  "description": "Rajshree Singh's Portfolio Website.",
+  "icons": [
+    {
+      "src": "/icon.jpeg",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon.jpeg",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon.jpeg",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon.jpeg",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#7000FF",
+  "background_color": "#000000",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
+}
