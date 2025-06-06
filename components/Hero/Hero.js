@@ -98,9 +98,16 @@ const Hero = () => {
           <Profiles />
         </div>
         <div className="staggered-reveal pt-4">
-          <Button href={`#${MENULINKS[4].ref}`} classes="link" type="primary">
-            Let&apos;s Talk
-          </Button>
+      <div className="staggered-reveal pt-4">
+            <a
+              href="/resumeRajshree.pdf"
+              download
+              className="inline-block px-6 py-3 text-white bg-purple-600 hover:bg-purple-700 border border-white/20 shadow-lg hover:shadow-purple-500/40 ring-1 ring-white/10 hover:ring-purple-400 rounded-md font-semibold transition-all duration-300"
+            >
+              Download Resume
+            </a>
+
+          </div>
         </div>
       </div>
       <div
