@@ -4,9 +4,9 @@ import toast, { Toaster } from "react-hot-toast";
 import Fade from "react-reveal/Fade";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import mail from "./mailer";
 import styles from "./Contact.module.scss";
 import { MENULINKS } from "../../constants";
+import emailjs from "@emailjs/browser";
 
 const filter = new Filter();
 filter.removeWords("hell", "god", "shit");
@@ -47,6 +47,14 @@ const success = () =>
     },
   });
 
+const mail = ({ name, email, message }) =>
+  emailjs.send(
+    process.env.NEXT_PUBLIC_SERVICE_ID,
+    process.env.NEXT_PUBLIC_TEMPLATE_ID,
+    { name, email, message },
+    process.env.NEXT_PUBLIC_USER_ID
+  );
+
 const Contact = () => {
   const initialState = { name: "", email: "", message: "" };
   const [formData, setFormData] = useState(initialState);
@@ -57,7 +65,6 @@ const Contact = () => {
 
   const handleChange = ({ target }) => {
     const { id, value } = target;
-    value.length === 0 ? setIsSending(false) : setIsSending(true);
     setFormData((prevVal) => {
       if (
         value.trim() !== prevVal[id] &&
@@ -88,18 +95,29 @@ const Contact = () => {
       return setMailerResponse("empty");
     }
 
+    // Basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      toast.error("Please enter a valid email address", {
+        id: "error",
+        style: {
+          background: "#ff4b4b",
+          color: "#fff",
+        },
+      });
+      return setMailerResponse("error");
+    }
+
     setIsSending(true);
     mail({ name, email, message })
       .then((res) => {
-        if (res.status === 200) {
-          setMailerResponse("success");
-          emptyForm();
-        } else {
-          setMailerResponse("error");
-        }
+        setMailerResponse("success");
+        emptyForm();
+        setIsSending(false);
       })
       .catch((err) => {
         setMailerResponse("error");
+        setIsSending(false);
         console.error(err);
       });
   };
@@ -307,7 +325,7 @@ const Contact = () => {
 
             <div className="relative mt-14">
               <input
-                type="text"
+                type="email"
                 id="email"
                 className="block w-full h-12 sm:h-14 px-4 text-xl sm:text-2xl font-mono outline-none border-2 border-purple bg-transparent rounded-[0.6rem] transition-all duration-200"
                 value={formData.email}
@@ -353,9 +371,8 @@ const Contact = () => {
             disabled={
               formData.name === "" ||
               formData.email === "" ||
-              formData.message === ""
-                ? true
-                : false
+              formData.message === "" ||
+              isSending
             }
             onClick={handleSubmit}
           >
