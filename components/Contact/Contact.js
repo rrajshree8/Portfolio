@@ -6,7 +6,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import styles from "./Contact.module.scss";
 import { MENULINKS } from "../../constants";
-import emailjs from "@emailjs/browser";
+import mail from "./mailer";
 
 const filter = new Filter();
 filter.removeWords("hell", "god", "shit");
@@ -47,14 +47,6 @@ const success = () =>
     },
   });
 
-const mail = ({ name, email, message }) =>
-  emailjs.send(
-    process.env.NEXT_PUBLIC_SERVICE_ID,
-    process.env.NEXT_PUBLIC_TEMPLATE_ID,
-    { name, email, message },
-    process.env.NEXT_PUBLIC_USER_ID
-  );
-
 const Contact = () => {
   const initialState = { name: "", email: "", message: "" };
   const [formData, setFormData] = useState(initialState);
@@ -83,18 +75,11 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    const { name, email, message } = {
-      name: formData.name,
-      email: formData.email,
-      message: formData.message,
-    };
-
+    const { name, email, message } = formData;
     if (name === "" || email === "" || message === "") {
       empty();
       return setMailerResponse("empty");
     }
-
     // Basic email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
@@ -107,7 +92,6 @@ const Contact = () => {
       });
       return setMailerResponse("error");
     }
-
     setIsSending(true);
     mail({ name, email, message })
       .then((res) => {
