@@ -88,6 +88,33 @@ export const SKILLS = {
 
 export const PROJECTS = [
   {
+    name: "New-Aggregator",
+    image: "/news.png",
+    blurImage: "/projects/blur/airbnb-blur.webp",
+    description: "News App using React + Typescript + Tailwindcss 🛏️",
+    gradient: ["#F14658", "#DC2537"],
+    url: "https://news-aggregator-rrajshree8s-projects.vercel.app/",
+    tech: ["react", "typescript", "tailwindcss",],
+  },
+  {
+    name: "Weather-App",
+    image: "/weather.png",
+    blurImage: "/projects/blur/airbnb-blur.webp",
+    description: "Weather-App using React + Typescript + Tailwindcss 🛏️",
+    gradient: ["#F14658", "#DC2537"],
+    url: "https://weather-app-rajshree-rrajshree8s-projects.vercel.app/",
+    tech: ["react", "typescript", "tailwindcss",],
+  },
+  {
+    name: "Crypto-Tracker",
+    image: "/crypto.png",
+    blurImage: "/projects/blur/airbnb-blur.webp",
+    description: "Crypto Tracker using React + Typescript + Tailwindcss 🛏️",
+    gradient: ["#F14658", "#DC2537"],
+    url: "https://crypto-tracker-rrajshree8s-projects.vercel.app/",
+    tech: ["react", "typescript", "tailwindcss",],
+  },
+  {
     name: "DiceGame",
     image: "/cube2.jpg",
     blurImage: "/projects/blur/airbnb-blur.webp",

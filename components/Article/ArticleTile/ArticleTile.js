@@ -4,7 +4,10 @@ import VanillaTilt from "vanilla-tilt";
 import styles from './ArticleTile.module.scss'
 
 const ArticleTile = ({ article, classes, isDesktop }) => {
-  const { name, image, blurImage, description, gradient, url, tech } = article;
+  const { name, title, image, blurImage, description, gradient, url, tech } = article;
+  
+  // Use title as fallback for name (for API data)
+  const displayName = name || title || "Article";
 
   const cardRef = useRef(null);
 
@@ -50,7 +53,7 @@ const ArticleTile = ({ article, classes, isDesktop }) => {
         />
         <Image
           src={image}
-          alt={name}
+          alt={displayName}
           fill
           placeholder="blur"
           blurDataURL={blurImage}
@@ -72,7 +75,7 @@ const ArticleTile = ({ article, classes, isDesktop }) => {
           className="font-medium text-3xl sm:text-4xl z-10 pl-2 transform-gpu"
           style={{ transform: "translateZ(3rem)" }}
         >
-          {name}
+          {displayName}
         </h1>
         <div
           className={`
