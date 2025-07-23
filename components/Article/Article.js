@@ -151,7 +151,7 @@ const Articles = ({ isDesktop, clientHeight }) => {
             My Articles
           </h1>
           <h2 className="text-[1.65rem] font-medium md:max-w-lg max-w-sm mt-2 staggered-reveal">
-            A few things I've written with passion, clarity, and curiosity.
+            A few things I&apos;ve written with passion, clarity, and curiosity.
           </h2>
         </div>
         <div
