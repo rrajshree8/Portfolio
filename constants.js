@@ -93,7 +93,7 @@ export const PROJECTS = [
     blurImage: "/projects/blur/airbnb-blur.webp",
     description: "News App using React + Typescript + Tailwindcss 🛏️",
     gradient: ["#F14658", "#DC2537"],
-    url: "https://news-aggregator-rrajshree8s-projects.vercel.app/",
+    url: "https://news-aggregator-three-nu.vercel.app/",
     tech: ["react", "typescript", "tailwindcss",],
   },
   {
