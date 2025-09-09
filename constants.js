@@ -242,7 +242,7 @@ export const WORK_CONTENTS = {
     {
       title: "Welocalize",
       description:
-        "Implemented key frontend features for Welocalize and Autodesk projects using Next.js and TypeScript, ensuring high-performance and scalability across multiple pages.",
+       "Developed key frontend features for Welocalize and Autodesk projects with Next.js and TypeScript, optimizing performance and scalability across multiple pages.",
       content: (
         <div className="h-full w-full flex items-center justify-center text-white px-4">
           Software Developer
