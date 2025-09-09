@@ -238,6 +238,18 @@ export const ARTICLES = [
 // ];
 
 export const WORK_CONTENTS = {
+    Welocalize: [
+    {
+      title: "Welocalize",
+      description:
+        "Implemented key frontend features for Welocalize and Autodesk projects using Next.js and TypeScript, ensuring high-performance and scalability across multiple pages.",
+      content: (
+        <div className="h-full w-full flex items-center justify-center text-white px-4">
+          Software Developer
+        </div>
+      ),
+    },
+  ],
   Delta6LabsFintechCompany: [
     {
       title: "Delta6Labs Fintech Company",
